@@ -1,0 +1,11 @@
+.headerWrapper {
+    grid-area: h;
+    background-color:rgba(54, 183, 206, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerWrapper h2 {
+    color: green;
+    font-size:28px;
+}

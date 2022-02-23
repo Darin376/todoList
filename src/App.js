@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Header } from "./components/Header/Header";
+import { NavBar } from "./components/NavBar/NavBar";
+import { HomePage } from "./components/HomePage/HomePage";
+import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
+import { TodoList } from "./components/TodoList/TodoList";
+import { useDispatch } from 'react-redux';
+import {  postLoad } from "./Redux/actions";
+import {  useEffect } from 'react';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(postLoad());
+}, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='app-wrapper'>
+        <Header />
+        <NavBar />
+        <div className='app-wrapper-content'>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/todoList' element={<TodoList/>} />
+            <Route path='*' element={<NotFoundPage />} />
+          </Routes>
+        </div>
+      </div>
+    </Router >
   );
 }
 

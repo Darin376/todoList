@@ -1,0 +1,6 @@
+export const todoActionTypes = {
+    ADDPOST: "ADDPOST",
+    POSTUPDATE: "POSTUPDATE",
+    POSTDELITE: "POSTDELITE",
+    POSTLOAD:"POSTLOAD",
+}

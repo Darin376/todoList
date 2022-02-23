@@ -1,0 +1,23 @@
+.singlePostButton {
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.singlePostButton button {
+    margin-right: 20px;
+}
+.singlePostWrapper hr {
+    margin-bottom: 50px;
+}
+.singlePostInput {
+    width: 70%;
+    min-height: 150px;
+    text-align:  left;
+    font-size: 18px;
+    background-color: rgb(215, 255, 255);
+    font-weight: 600;
+    padding: 0px 20px;
+    resize: none;
+}

@@ -1,0 +1,25 @@
+.HomePageWrapper {
+ display: flex;
+ justify-content: center;
+ align-items:center;
+}
+.HomePageTitleWrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.HomePageImgWrapper img{
+width: 100%;
+height: 100%;
+}
+.HomePageImgWrapper{
+width: 400px;
+height: 400px;
+}
+@media(max-width:550px){
+    .HomePageImgWrapper{
+        width: 200px;
+        height: 200px;
+        }
+ 
+}

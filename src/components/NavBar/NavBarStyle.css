@@ -1,0 +1,19 @@
+.navBarWrapper {
+    grid-area: n;
+    background-color:rgba(61, 67, 68, 0.6);
+    padding: 20px;
+}
+.navBarContent {
+    display: flex;
+    flex-direction: column;
+}
+.navBarContent span {
+    font-size: 26px;
+    padding-top: 22px;
+}
+@media(max-width:550px){
+    .navBarContent span {
+    font-size: 18px;
+    padding-top: 16px;
+}
+}
